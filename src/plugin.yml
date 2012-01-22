@@ -1,0 +1,42 @@
+name: MyriadVanish
+main: com.navidk.myriadvanish.MyriadVanish
+version: 1.0.0
+author: Navid K.
+commands:
+  vanish:
+    description: Hide from player's view.
+    aliases: poof
+  nopickup:
+    description: Toggles Picking Up Items
+    aliases: np
+permissions:
+  vanish.*:
+    description: Person can hide on the player list.
+    children:
+      vanish.hide: true
+      vanish.pickup: true
+      vanish.list: true
+      vanish.vanish: true
+      vanish.all: true
+      vanish.nomobs: true
+      vanish.pickuplist: true
+    vanish.hide:     
+        description: Hide yourself.   
+        default: op
+    vanish.pickup:     
+        description: Stop yourself from picking items up.        
+        default: op
+    vanish.list:
+        description: Allow player to recieve vanish list     
+        default: op
+    vanish.all:
+        description: Allows user to use all commands and vanish/nopickup. 
+        default: op
+    vanish.nomobs:
+        description: Mobs don't attack while invisible.     
+        default: op
+    vanish.pickuplist:
+        description: Shows player list of people who don't pickup items.
+        default: op
+     
+  
